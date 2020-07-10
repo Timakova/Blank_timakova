@@ -30,7 +30,7 @@ public class Utils {
     //Объекты Главной
     private By imgBanner = By.xpath("//img[@class='picture__img']");
     //Объекты Категории
-    private By articleProduct1Categori = By.xpath("//div[@id='main']//section[1]//div[1]/article");
+    private By articleProduct1Categori = By.xpath("//div[@id='main']//div/section//a[1]");
 
     //////////////////////////////////////////////Все тесты//////////////////////////////////////////////////
 
