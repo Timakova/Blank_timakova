@@ -40,16 +40,6 @@ public class HeaderAlrosa {
         utils.clickLogo();
     }
 
-    @Step("Получение текста Партнерам в хедере")
-    public String getTextPartnerHeader () {
-        return utils.getTextPartnerHeader();
-    }
-
-    @Step("Получение заголовка на главной странице")
-    public String getHeadMainPage () {
-        return utils.getHeadMainPage();
-    }
-
     @Step("Получение валюты в хедере")
     public String getTextCurrency () {
         return utils.getTextCurrency();

@@ -1,4 +1,5 @@
 import Pages.HeaderAlrosa.HeaderAlrosa;
+import Pages.HeaderAlrosa.UtilHeader;
 import Pages.PartnersAlrosa.PartnersAlrosa;
 import Utils.Browser;
 import Utils.Global;
@@ -15,7 +16,7 @@ public class HeaderAlrosaTest {
 
     private static WebDriver driver;
     private HeaderAlrosa headerAlrosa;
-    private PartnersAlrosa partnersAlrosa;
+    private UtilHeader utilHeader;
     public Global global;
 
     //Действия перед всеми тест-кейсами
@@ -35,7 +36,7 @@ public class HeaderAlrosaTest {
         driver.manage().deleteAllCookies(); //Удалить все куки
         driver.navigate().refresh(); //Обновить страницу
         headerAlrosa = new HeaderAlrosa(driver); //Используемые классы в данном тест-сценарии
-        partnersAlrosa = new PartnersAlrosa(driver);
+        utilHeader = new UtilHeader(driver);
         global = new Global(driver); //Используемые классы в данном тест-сценарии
     }
 
@@ -65,9 +66,9 @@ public class HeaderAlrosaTest {
     @Owner(value = "Тимакова Т.В.") //Инициалы того, кто написал тест-сценарий
     public void HeaderAlrosaEnTest() {
         headerAlrosa.сlickHeaderEn();
-        String textPartnerHeader = headerAlrosa.getTextPartnerHeader();
+        String textPartnerHeader = utilHeader.getTextPartnerHeader();
         Assert.assertEquals("FOR CORPORATE CLIENTS", textPartnerHeader);
-        String headMain = headerAlrosa.getHeadMainPage();
+        String headMain = utilHeader.getHeadMainPage();
         Assert.assertEquals("CHOOSE YOUR DIAMOND'S", headMain);
     }
 
@@ -78,9 +79,9 @@ public class HeaderAlrosaTest {
     @Owner(value = "Тимакова Т.В.") //Инициалы того, кто написал тест-сценарий
     public void HeaderAlrosaRuTest() {
         headerAlrosa.сlickHeaderRu();
-        String textPartnerHeader = headerAlrosa.getTextPartnerHeader();
+        String textPartnerHeader = utilHeader.getTextPartnerHeader();
         Assert.assertEquals("ЮРИДИЧЕСКИМ ЛИЦАМ", textPartnerHeader);
-        String headMain = headerAlrosa.getHeadMainPage();
+        String headMain = utilHeader.getHeadMainPage();
         Assert.assertEquals("ВЫБЕРИТЕ ВАШ БРИЛЛИАНТ", headMain);
     }
 
@@ -91,9 +92,9 @@ public class HeaderAlrosaTest {
     @Owner(value = "Тимакова Т.В.") //Инициалы того, кто написал тест-сценарий
     public void HeaderAlrosaCnTest() {
         headerAlrosa.clickHeaderCn();
-        String textPartnerHeader = headerAlrosa.getTextPartnerHeader();
+        String textPartnerHeader = utilHeader.getTextPartnerHeader();
         Assert.assertEquals("法人信息", textPartnerHeader);
-        String headMain = headerAlrosa.getHeadMainPage();
+        String headMain = utilHeader.getHeadMainPage();
         Assert.assertEquals("选择你的钻石", headMain);
     }
 
