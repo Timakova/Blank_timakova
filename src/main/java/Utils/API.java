@@ -1,6 +1,7 @@
 package Utils;
 
 import io.qameta.allure.Step;
+import org.junit.Ignore;
 import org.openqa.selenium.WebDriver;
 import static Pages.Header.Utils.searctName;
 import static com.jayway.restassured.RestAssured.given;
